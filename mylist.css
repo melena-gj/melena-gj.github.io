@@ -99,7 +99,7 @@ input[type=button] {
 .bro input[type=button] {
 	width: 90px;
 	height: 25px;
-	background-color: black;
+	background-color: green;
 	border-color: black;
 }
 
