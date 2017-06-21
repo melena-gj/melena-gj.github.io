@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html" />
+<title>My List</title>
+<link rel="stylesheet" type="text/css" href="mylist.css">
+<script src="mylist.js"></script>
+</head>
+
+
+
+
+<body>
+	<div class="mainbox">
+		<!-- LEFT COLUMN -->
+		<div class="left">
+			<!-- RED -->
+			<div class="topleft">
+				<table> 
+					<tr class="CalcTitle">
+					<text>Calculator</text>
+					</tr>
+					<tr>
+						<form name="Calc">
+							<table border=1 class="calculator">
+								<tr>
+									<td>
+										<!-- <input type="text" id="calcoutput" name="Calcout" size=16 /> -->
+										<text id="out">Enter a sum:</text>
+									</td>						
+								</tr>
+								<tr>
+									<td>
+										<input type="text" id="calcinput" name="Numbers" size=20 />
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="button" value="  1  " id="1" onClick="document.Calc.Numbers.value += '1'"/>
+										<input type="button" value="  2  " id="2" onClick="document.Calc.Numbers.value += '2'"/>
+										<input type="button" value="  3  " id="3" onClick="document.Calc.Numbers.value += '3'"/>
+										<input type="button" value="  /  " id="/" onClick="document.Calc.Numbers.value += '/'"/>
+										<br />
+										<input type="button" value="  4  " id="4" onClick="document.Calc.Numbers.value += '4'"/>
+										<input type="button" value="  5  " id="5" onClick="document.Calc.Numbers.value += '5'"/>
+										<input type="button" value="  6  " id="6" onClick="document.Calc.Numbers.value += '6'"/>
+										<input type="button" value="  x  " id="x" onClick="document.Calc.Numbers.value += '*'"/>
+										<br />
+										<input type="button" value="  7  " id="7" onClick="document.Calc.Numbers.value += '7'"/>
+										<input type="button" value="  8  " id="8" onClick="document.Calc.Numbers.value += '8'"/>
+										<input type="button" value="  9  " id="9" onClick="document.Calc.Numbers.value += '9'"/>
+										<input type="button" value="  +  " id="+" onClick="document.Calc.Numbers.value += '+'"/>
+										<br />
+										<input type="button" value="AC" id="AC" onClick="ClearCalc()"/>
+										<input type="button" value="  0  " id="0" onClick="document.Calc.Numbers.value += '0'"/>
+										<input type="button" value="  =  " id="=" onClick="Calculate()"/>
+										<input type="button" value="  -  " id="-" onClick="document.Calc.Numbers.value += '-'"/>
+										<br />
+									</td>
+								</tr>
+							</table>
+					</tr>
+				</table>
+				<!-- <text>-doesn't check input <br/>(does nothing if invalid)</text> -->
+			</div>
+			<!-- BLUE -->
+			<div class="bottomleft">
+				<div class="sis">
+					<text>To Do List</text>
+					<ol id="listspace"></ol>
+					<form name="todo">
+							<input type="text" id="addli" name="itemadd" size=30/>
+							<input type="button" value="Add" id="submitnewitem" onclick="addItem()"/>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- RIGHT COLUMN -->
+		<div class="right">
+			<!-- YELLOW -->
+			<div class="topright">
+				<table> 
+					<tr>
+						<td colspan="2">
+						<text>Naughts and Crosses</text><br/>
+						</td>
+					<tr>
+						<td>
+							<table name="NaughtsCrosses">
+								<tr>
+									<td><input type="button" id="aa" onclick="Change('aa')"/>
+									</td>
+									<td><input type="button" id="ab" onclick="Change('ab')"/>
+									</td>
+									<td><input type="button" id="ac" onclick="Change('ac')"/>
+									</td>
+								</tr>
+								<tr>
+									<td><input type="button" id="ba" onclick="Change('ba')"/>
+									</td>
+									<td><input type="button" id="bb" onclick="Change('bb')"/>
+									</td>
+									<td><input type="button" id="bc" onclick="Change('bc')"/>
+									</td>
+								</tr>
+								<tr>
+									<td><input type="button" id="ca" onclick="Change('ca')"/>
+									</td>
+									<td><input type="button" id="cb" onclick="Change('cb')"/>
+									</td>
+									<td><input type="button" id="cc" onclick="Change('cc')"/>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+						Crosses start! 
+							<table>
+								<tr>
+									<td colspan="2">
+										<div class="bro">
+										<input type="button" id="cleargame" value="Start Again" onClick="ClearGame()"/>
+										</div>
+									</td>					
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<!-- <text>-doesn't determine winner</text><br/> -->
+				<!-- <text>-doesn't keep tally</text>						 -->
+			</div>
+			<!-- GREEN -->
+			<div class="bottomright">
+				<text id="welcomemessage" class="welcome"></text>
+				<input type="button" id="set" value="SET" onClick="getCookie()"/>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
+
+
